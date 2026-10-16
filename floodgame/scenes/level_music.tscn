@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://lx6oo6mrprsh"]
+
+[ext_resource type="AudioStream" uid="uid://dabxbmuy77yuo" path="res://sounds/Slower-Tempo-2020-03-22_-_8_Bit_Surf_-_FesliyanStudios.com_-_David_Renda.mp3" id="1_ndvwh"]
+
+[node name="LevelMusic" type="AudioStreamPlayer" unique_id=217097571]
+stream = ExtResource("1_ndvwh")

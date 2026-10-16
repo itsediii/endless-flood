@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://neodls3ol50"
+path="res://.godot/imported/9mm Burst.wav-6f29d5dd3e44c495e45546a3cf7b8b18.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/Full Sound/9mm/WAV/9mm Burst.wav"
+dest_files=["res://.godot/imported/9mm Burst.wav-6f29d5dd3e44c495e45546a3cf7b8b18.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

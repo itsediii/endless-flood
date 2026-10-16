@@ -1,0 +1,208 @@
+[gd_scene format=3 uid="uid://bcy31drk1u3d2"]
+
+[ext_resource type="Script" uid="uid://bsm7hs4bkg47p" path="res://entities/player/player.gd" id="1_abrql"]
+[ext_resource type="Texture2D" uid="uid://bt6l7374rhasp" path="res://entities/player/mHero_.png" id="1_symyc"]
+[ext_resource type="PackedScene" uid="uid://nn3ejdt80sry" path="res://scenes/pistol.tscn" id="4_8fjmc"]
+[ext_resource type="PackedScene" uid="uid://bk8umvmynjnfb" path="res://scenes/assault_rifle.tscn" id="5_qiwj3"]
+[ext_resource type="PackedScene" uid="uid://drlc1oowx6ipe" path="res://scenes/shotgun.tscn" id="6_26q78"]
+[ext_resource type="AudioStream" uid="uid://bfpcp7g5uhcge" path="res://sounds/Voices_Essentials_NOX_SOUND/Voice_Male/Voice_Male_Pain/Voice_Male_V1_Pain_Mono_08.wav" id="7_26q78"]
+[ext_resource type="AudioStream" uid="uid://dk6ia2jtfn3h8" path="res://sounds/Footsteps_Essentials_NOX_SOUND/Footsteps_Mud/Footsteps_Mud_Run/Footsteps_Mud_Run_01.wav" id="8_bectd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_abrql"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 120, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sglur"]
+atlas = ExtResource("1_symyc")
+region = Rect2(24, 120, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bls4j"]
+atlas = ExtResource("1_symyc")
+region = Rect2(48, 120, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fkugw"]
+atlas = ExtResource("1_symyc")
+region = Rect2(72, 120, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8fjmc"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiwj3"]
+atlas = ExtResource("1_symyc")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_26q78"]
+atlas = ExtResource("1_symyc")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bectd"]
+atlas = ExtResource("1_symyc")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wvtmh"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7thud"]
+atlas = ExtResource("1_symyc")
+region = Rect2(24, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a1qjk"]
+atlas = ExtResource("1_symyc")
+region = Rect2(48, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j3ovn"]
+atlas = ExtResource("1_symyc")
+region = Rect2(72, 48, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_afbqv"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gx6sm"]
+atlas = ExtResource("1_symyc")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yqrof"]
+atlas = ExtResource("1_symyc")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3wlsy"]
+atlas = ExtResource("1_symyc")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b2kln"]
+atlas = ExtResource("1_symyc")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_we0b7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_abrql")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sglur")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bls4j")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fkugw")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8fjmc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiwj3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_26q78")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bectd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 2.5
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wvtmh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7thud")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a1qjk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j3ovn")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_afbqv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gx6sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yqrof")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3wlsy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b2kln")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mtric"]
+size = Vector2(10, 16)
+
+[node name="player" type="CharacterBody2D" unique_id=2119995513 groups=["player"]]
+collision_mask = 5
+script = ExtResource("1_abrql")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=362402556]
+sprite_frames = SubResource("SpriteFrames_we0b7")
+animation = &"run"
+frame_progress = 0.20952052
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=967316363]
+position = Vector2(0, 4)
+shape = SubResource("RectangleShape2D_mtric")
+
+[node name="Weapons" type="Node2D" parent="." unique_id=486031920]
+position = Vector2(25, -1)
+
+[node name="Pistol" parent="Weapons" unique_id=414497415 instance=ExtResource("4_8fjmc")]
+position = Vector2(-17, 5)
+damage = 4
+bullet_scale = 0.18
+
+[node name="AssaultRifle" parent="Weapons" unique_id=737341123 instance=ExtResource("5_qiwj3")]
+visible = false
+position = Vector2(-18, 5)
+fire_rate = 0.15
+damage = 3
+bullet_speed = 500.0
+bullet_scale = 0.2
+
+[node name="Shotgun" parent="Weapons" unique_id=188103302 instance=ExtResource("6_26q78")]
+visible = false
+position = Vector2(-17, 5)
+scale = Vector2(0.6, 0.6)
+ammo_type = "shell"
+fire_rate = 1.4
+damage = 4
+bullet_speed = 450.0
+bullet_scale = 0.2
+bullet_lifetime = 0.2
+
+[node name="Camera2D" type="Camera2D" parent="." unique_id=2006352001]
+zoom = Vector2(3, 3)
+
+[node name="Death" type="AudioStreamPlayer2D" parent="." unique_id=2042223941]
+stream = ExtResource("7_26q78")
+
+[node name="Footsteps" type="AudioStreamPlayer2D" parent="." unique_id=624445526]
+stream = ExtResource("8_bectd")
+volume_db = -4.0
+
+[node name="FootstepsTimer" type="Timer" parent="." unique_id=257177332]
+wait_time = 0.8
+one_shot = true

@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://bk8umvmynjnfb"]
+
+[ext_resource type="PackedScene" uid="uid://d0teeq5nxubtm" path="res://scenes/base_weapon.tscn" id="1_uj1xx"]
+[ext_resource type="Texture2D" uid="uid://g6mil8qhi52p" path="res://assets/guns/gun.png" id="2_2uvai"]
+[ext_resource type="PackedScene" uid="uid://bs2rfli5praog" path="res://scenes/small_bullet.tscn" id="2_fusdv"]
+[ext_resource type="AudioStream" uid="uid://c6au5sn6vunam" path="res://sounds/Guns/Full Sound/5.56/WAV/556 Single WAV.wav" id="4_qjwf5"]
+
+[node name="AssaultRifle" unique_id=414497415 instance=ExtResource("1_uj1xx")]
+bullet_scene = ExtResource("2_fusdv")
+shoot_sound = ExtResource("4_qjwf5")
+
+[node name="GunSprite" parent="." index="0" unique_id=1599421861]
+position = Vector2(-1.10039366e-07, 1.1920929e-07)
+scale = Vector2(0.6153846, 0.6666667)
+texture = ExtResource("2_2uvai")
+region_enabled = true
+region_rect = Rect2(128, 100, 26, 12)
+
+[node name="MuzzleFlash" parent="." index="1" unique_id=1745044742]
+position = Vector2(11, -1)
+scale = Vector2(0.08939874, 0.05781251)
+
+[node name="Muzzle" parent="." index="2" unique_id=1035355505]
+position = Vector2(7, -1)

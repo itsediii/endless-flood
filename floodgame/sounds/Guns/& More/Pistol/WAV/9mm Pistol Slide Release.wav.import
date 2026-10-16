@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clb3offit5b6r"
+path="res://.godot/imported/9mm Pistol Slide Release.wav-a27e6e5bd0782a57dafeb34dc5ae92c6.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Pistol/WAV/9mm Pistol Slide Release.wav"
+dest_files=["res://.godot/imported/9mm Pistol Slide Release.wav-a27e6e5bd0782a57dafeb34dc5ae92c6.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

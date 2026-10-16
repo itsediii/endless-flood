@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://won6ub5ud3b"
+path="res://.godot/imported/308 Magazine Full MP3.mp3-742a56c31b37ef67852c32794a7467f8.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Reloads, Cycling & More/MP3/308 Magazine Full MP3.mp3"
+dest_files=["res://.godot/imported/308 Magazine Full MP3.mp3-742a56c31b37ef67852c32794a7467f8.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

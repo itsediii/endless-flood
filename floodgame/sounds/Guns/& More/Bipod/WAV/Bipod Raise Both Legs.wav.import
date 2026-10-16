@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://br1cs2uaxd7ax"
+path="res://.godot/imported/Bipod Raise Both Legs.wav-d56646eb76f744a16bc1a30b15c0ebf0.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Bipod/WAV/Bipod Raise Both Legs.wav"
+dest_files=["res://.godot/imported/Bipod Raise Both Legs.wav-d56646eb76f744a16bc1a30b15c0ebf0.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

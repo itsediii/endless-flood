@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://cj66pt6oibh4b"]
+
+[ext_resource type="Texture2D" uid="uid://cbpwij4ecu07g" path="res://entities/necromancer/necromancer_.png" id="1_s2tu7"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7fpn0"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(0, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b3xcu"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(24, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtn4t"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(48, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nbxww"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(72, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4ybi"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_adrw5"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mqqaa"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mpogf"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v0v21"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o2rrx"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eqyqr"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ao85w"]
+atlas = ExtResource("1_s2tu7")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_grghp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7fpn0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b3xcu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtn4t")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nbxww")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4ybi")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_adrw5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mqqaa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mpogf")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v0v21")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o2rrx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eqyqr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ao85w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqaot"]
+size = Vector2(14, 17)
+
+[node name="necromancer" type="CharacterBody2D" unique_id=1422411145]
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1084734814]
+sprite_frames = SubResource("SpriteFrames_grghp")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=97427628]
+position = Vector2(0, 3.5)
+shape = SubResource("RectangleShape2D_lqaot")

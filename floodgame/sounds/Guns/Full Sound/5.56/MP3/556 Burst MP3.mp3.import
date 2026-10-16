@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bbwwr1e78w8nc"
+path="res://.godot/imported/556 Burst MP3.mp3-64a74f6e34a92277c7a8eef862426d13.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Full Sound/5.56/MP3/556 Burst MP3.mp3"
+dest_files=["res://.godot/imported/556 Burst MP3.mp3-64a74f6e34a92277c7a8eef862426d13.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

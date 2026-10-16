@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d37e6cnoomhse"
+path="res://.godot/imported/Modded Mosin PolyMag Pack.wav-d564ee33bc64b0858de43236d5bb33bc.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Mag Pack/WAV/Modded Mosin PolyMag Pack.wav"
+dest_files=["res://.godot/imported/Modded Mosin PolyMag Pack.wav-d564ee33bc64b0858de43236d5bb33bc.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

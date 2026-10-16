@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dpd0csj16syh0"
+path="res://.godot/imported/762x39 Spray Isolated WAV.wav-233a810d7ebda6ec954b0522de14e27e.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/7.62x39/WAV/762x39 Spray Isolated WAV.wav"
+dest_files=["res://.godot/imported/762x39 Spray Isolated WAV.wav-233a810d7ebda6ec954b0522de14e27e.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

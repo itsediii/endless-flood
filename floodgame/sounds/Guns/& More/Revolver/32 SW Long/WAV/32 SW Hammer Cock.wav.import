@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://p4uxrwdq61d"
+path="res://.godot/imported/32 SW Hammer Cock.wav-b4a6b92aeb95dfcf643c6e5ea6b5f6b9.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/32 SW Long/WAV/32 SW Hammer Cock.wav"
+dest_files=["res://.godot/imported/32 SW Hammer Cock.wav-b4a6b92aeb95dfcf643c6e5ea6b5f6b9.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

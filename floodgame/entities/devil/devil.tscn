@@ -1,0 +1,167 @@
+[gd_scene format=3 uid="uid://cnp4q6v4bbxjl"]
+
+[ext_resource type="PackedScene" uid="uid://c0gpk3wotqdov" path="res://scenes/base_enemy.tscn" id="1_t65oy"]
+[ext_resource type="Texture2D" uid="uid://tjhnu0kmidwh" path="res://entities/devil/devil_.png" id="2_71udn"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_18dvq"]
+atlas = ExtResource("2_71udn")
+region = Rect2(0, 140, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_goqjw"]
+atlas = ExtResource("2_71udn")
+region = Rect2(28, 140, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gqf7l"]
+atlas = ExtResource("2_71udn")
+region = Rect2(56, 140, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ss46n"]
+atlas = ExtResource("2_71udn")
+region = Rect2(84, 140, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gxnq1"]
+atlas = ExtResource("2_71udn")
+region = Rect2(0, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_sq1nr"]
+atlas = ExtResource("2_71udn")
+region = Rect2(28, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jr6ca"]
+atlas = ExtResource("2_71udn")
+region = Rect2(56, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_efb47"]
+atlas = ExtResource("2_71udn")
+region = Rect2(84, 0, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ay2pg"]
+atlas = ExtResource("2_71udn")
+region = Rect2(0, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k20qe"]
+atlas = ExtResource("2_71udn")
+region = Rect2(28, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ub7bk"]
+atlas = ExtResource("2_71udn")
+region = Rect2(56, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7d2sj"]
+atlas = ExtResource("2_71udn")
+region = Rect2(84, 56, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_74tam"]
+atlas = ExtResource("2_71udn")
+region = Rect2(0, 28, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gt2i3"]
+atlas = ExtResource("2_71udn")
+region = Rect2(28, 28, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1ynu"]
+atlas = ExtResource("2_71udn")
+region = Rect2(56, 28, 28, 28)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kj5ua"]
+atlas = ExtResource("2_71udn")
+region = Rect2(84, 28, 28, 28)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xd1l4"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_18dvq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_goqjw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gqf7l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ss46n")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gxnq1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_sq1nr")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jr6ca")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_efb47")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ay2pg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k20qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ub7bk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7d2sj")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_74tam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gt2i3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1ynu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kj5ua")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_71udn"]
+size = Vector2(14, 19)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_18dvq"]
+size = Vector2(16.5, 21)
+
+[node name="Devil" unique_id=1713638340 instance=ExtResource("1_t65oy")]
+max_health = 14.0
+walk_speed = 30.0
+chase_speed = 60.0
+patrol_interval = 5.0
+attack_damage = 5.0
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1314990715]
+sprite_frames = SubResource("SpriteFrames_xd1l4")
+animation = &"death"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=845525172]
+position = Vector2(1, 4.5)
+shape = SubResource("RectangleShape2D_71udn")
+
+[node name="CollisionShape2D" parent="DetectionArea" parent_id_path=PackedInt32Array(1676504539) index="0" unique_id=1247075202]
+position = Vector2(1, 4)
+
+[node name="CollisionShape2D2" parent="Hitbox" parent_id_path=PackedInt32Array(1189770347) index="0" unique_id=1166286674]
+position = Vector2(1.25, 4.5)
+shape = SubResource("RectangleShape2D_18dvq")

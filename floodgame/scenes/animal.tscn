@@ -1,0 +1,40 @@
+[gd_scene format=3 uid="uid://iec5g8knqbcb"]
+
+[ext_resource type="Script" uid="uid://duoi7fwivs00w" path="res://scripts/animal.gd" id="1_8dtbx"]
+[ext_resource type="Script" uid="uid://y1vkiyc1yhlo" path="res://scripts/interaction_area.gd" id="2_236rq"]
+
+[node name="Animal" type="CharacterBody2D" unique_id=163013722]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_8dtbx")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1226370022]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1261809350]
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1862299275]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_236rq")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=1672776066]
+debug_color = Color(0, 0.6491197, 0.16792685, 0.41960785)
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1714717354]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=693497370]
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=879317011]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Hitbox" unique_id=1774872531]
+
+[connection signal="area_entered" from="InteractionArea" to="." method="_on_interaction_area_area_entered"]
+[connection signal="interacted_with" from="InteractionArea" to="." method="_on_interaction_area_interacted_with"]
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]
+[connection signal="body_entered" from="Hitbox" to="." method="_on_hitbox_body_entered"]
+[connection signal="body_exited" from="Hitbox" to="." method="_on_hitbox_body_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dyxf0j3eucf5w"
+path="res://.godot/imported/20 Gauge Double Tap Isolated.mp3-0d7e044e1df3e49ee6bed8443702bbb9.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/20 Gauge/MP3/20 Gauge Double Tap Isolated.mp3"
+dest_files=["res://.godot/imported/20 Gauge Double Tap Isolated.mp3-0d7e044e1df3e49ee6bed8443702bbb9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

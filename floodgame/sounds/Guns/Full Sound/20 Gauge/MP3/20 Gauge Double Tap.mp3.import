@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5qopxrjrk57i"
+path="res://.godot/imported/20 Gauge Double Tap.mp3-64ae5aedac858be36ad62da46c71d576.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Full Sound/20 Gauge/MP3/20 Gauge Double Tap.mp3"
+dest_files=["res://.godot/imported/20 Gauge Double Tap.mp3-64ae5aedac858be36ad62da46c71d576.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

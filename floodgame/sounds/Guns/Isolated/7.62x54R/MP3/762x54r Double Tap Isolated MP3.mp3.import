@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dt48dsdymg0js"
+path="res://.godot/imported/762x54r Double Tap Isolated MP3.mp3-5a92794b8bd5048fd5be6ca80d7f8d5e.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/7.62x54R/MP3/762x54r Double Tap Isolated MP3.mp3"
+dest_files=["res://.godot/imported/762x54r Double Tap Isolated MP3.mp3-5a92794b8bd5048fd5be6ca80d7f8d5e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

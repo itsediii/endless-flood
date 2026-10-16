@@ -1,0 +1,26 @@
+[gd_scene format=3 uid="uid://cjn8ksfc2ukp2"]
+
+[ext_resource type="Script" uid="uid://dtpp7gvsps1yn" path="res://scenes/chest.gd" id="1_sy5e1"]
+[ext_resource type="Texture2D" uid="uid://baux4yh4bp2b2" path="res://assets/map/chest.png" id="2_gqd3d"]
+[ext_resource type="AudioStream" uid="uid://vjokdhaj2fde" path="res://sounds/Vehicle_Essentials_NOX_SOUND/Vehicle_Truck/Vehicle_Truck_Door_Opening_Exterior_Mono_02.wav" id="3_gqd3d"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_sy5e1"]
+radius = 16.124516
+
+[node name="chest" type="Area2D" unique_id=1343158718]
+collision_mask = 2
+script = ExtResource("1_sy5e1")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=254222744]
+texture = ExtResource("2_gqd3d")
+region_enabled = true
+region_rect = Rect2(18, 8, 12, 20)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2098741493]
+shape = SubResource("CircleShape2D_sy5e1")
+
+[node name="Marker2D" type="Marker2D" parent="." unique_id=371745219]
+position = Vector2(0, 6)
+
+[node name="OpenSound" type="AudioStreamPlayer2D" parent="." unique_id=1332700192]
+stream = ExtResource("3_gqd3d")

@@ -1,0 +1,155 @@
+[gd_scene format=3 uid="uid://wj6itvoskwec"]
+
+[ext_resource type="PackedScene" uid="uid://iec5g8knqbcb" path="res://scenes/animal.tscn" id="1_jo3av"]
+[ext_resource type="Texture2D" uid="uid://batj7c7jbnvq" path="res://assets/animals/MiniDeer1.png" id="2_ivhdu"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ooxo0"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(0, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4in71"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(32, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_j27sk"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(64, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_b305p"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(96, 160, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bkqaq"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1imjf"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ht00q"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n4c6h"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3waam"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ewegb"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t3lh0"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dore6"]
+atlas = ExtResource("2_ivhdu")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rg8j0"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ooxo0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4in71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_j27sk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_b305p")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bkqaq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1imjf")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ht00q")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n4c6h")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3waam")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ewegb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t3lh0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dore6")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ivhdu"]
+radius = 8.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ivhdu"]
+radius = 21.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_ooxo0"]
+radius = 52.773098
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_ooxo0"]
+height = 24.0
+
+[node name="Deer" unique_id=163013722 instance=ExtResource("1_jo3av")]
+animal_type = "deer"
+max_health = 8
+attack_damage = 0.0
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1226370022]
+sprite_frames = SubResource("SpriteFrames_rg8j0")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1261809350]
+position = Vector2(0, 9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ivhdu")
+
+[node name="CollisionShape2D" parent="InteractionArea" parent_id_path=PackedInt32Array(1862299275) index="0" unique_id=1672776066]
+position = Vector2(0, 8)
+shape = SubResource("CircleShape2D_ivhdu")
+
+[node name="DetectionArea" parent="." index="3" unique_id=1714717354]
+visible = false
+
+[node name="CollisionShape2D" parent="DetectionArea" index="0" unique_id=693497370]
+visible = false
+position = Vector2(0, 7)
+shape = SubResource("CircleShape2D_ooxo0")
+debug_color = Color(0.6039216, 0.37254903, 0.9882353, 0.06666667)
+
+[node name="Hitbox" parent="." index="4" unique_id=879317011]
+visible = false
+
+[node name="CollisionShape2D" parent="Hitbox" index="0" unique_id=1774872531]
+position = Vector2(0, 7)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_ooxo0")
+debug_color = Color(0.95191246, 0.19090217, 0.292625, 0.41960785)

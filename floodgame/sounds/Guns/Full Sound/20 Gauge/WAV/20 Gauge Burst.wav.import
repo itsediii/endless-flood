@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://d3ypm1yvutrm1"
+path="res://.godot/imported/20 Gauge Burst.wav-4aadb7ace213da89b84eb24b3b5548cd.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/Full Sound/20 Gauge/WAV/20 Gauge Burst.wav"
+dest_files=["res://.godot/imported/20 Gauge Burst.wav-4aadb7ace213da89b84eb24b3b5548cd.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

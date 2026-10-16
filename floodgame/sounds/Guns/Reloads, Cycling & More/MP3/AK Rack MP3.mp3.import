@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://3fedmugotxtj"
+path="res://.godot/imported/AK Rack MP3.mp3-6cb07828b59c61ecb1b462b191976d25.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Reloads, Cycling & More/MP3/AK Rack MP3.mp3"
+dest_files=["res://.godot/imported/AK Rack MP3.mp3-6cb07828b59c61ecb1b462b191976d25.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

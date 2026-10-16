@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bufwyxqk3f8qa"]
+
+[ext_resource type="PackedScene" uid="uid://dxhsacuma6ese" path="res://scenes/base_bullet.tscn" id="1_urxbh"]
+[ext_resource type="Texture2D" uid="uid://bce1l3j0yl65v" path="res://assets/guns/bullet.png" id="2_xbm07"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_urxbh"]
+radius = 119.999985
+height = 399.99997
+
+[node name="MediumBullet" unique_id=917729257 instance=ExtResource("1_urxbh")]
+
+[node name="Sprite2D" parent="." index="0" unique_id=283415863]
+texture = ExtResource("2_xbm07")
+region_enabled = true
+region_rect = Rect2(95, 71, 40, 25)
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1187863830]
+position = Vector2(1, 0)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_urxbh")

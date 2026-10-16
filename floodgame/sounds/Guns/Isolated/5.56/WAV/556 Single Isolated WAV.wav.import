@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://q0m1qi6lgaqg"
+path="res://.godot/imported/556 Single Isolated WAV.wav-70d99ea03ebd375470ca24853826812d.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/5.56/WAV/556 Single Isolated WAV.wav"
+dest_files=["res://.godot/imported/556 Single Isolated WAV.wav-70d99ea03ebd375470ca24853826812d.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

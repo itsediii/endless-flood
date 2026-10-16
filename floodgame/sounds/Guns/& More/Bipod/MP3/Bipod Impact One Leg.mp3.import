@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bgx0blnhuqr6y"
+path="res://.godot/imported/Bipod Impact One Leg.mp3-9e186728b5eb2ed70c7d25606c210fc1.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Bipod/MP3/Bipod Impact One Leg.mp3"
+dest_files=["res://.godot/imported/Bipod Impact One Leg.mp3-9e186728b5eb2ed70c7d25606c210fc1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

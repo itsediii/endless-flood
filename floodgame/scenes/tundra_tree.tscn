@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://dob6w57r0b51v"]
+
+[ext_resource type="Script" uid="uid://cwoi6h5tn8h0m" path="res://scenes/tundra_tree.gd" id="1_c385l"]
+[ext_resource type="Texture2D" uid="uid://ufclcmvopluy" path="res://assets/map/tundra_ [version 1.0]/tundra_ [resources].png" id="1_nqoy2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_c385l"]
+size = Vector2(12, 22)
+
+[node name="tundra_tree" type="StaticBody2D" unique_id=1397655675]
+script = ExtResource("1_c385l")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=200768507]
+texture = ExtResource("1_nqoy2")
+region_enabled = true
+region_rect = Rect2(34, 24, 12, 22)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=26726271]
+shape = SubResource("RectangleShape2D_c385l")

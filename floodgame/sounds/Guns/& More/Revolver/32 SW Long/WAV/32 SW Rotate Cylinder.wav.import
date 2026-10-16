@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://doub451gfn4sm"
+path="res://.godot/imported/32 SW Rotate Cylinder.wav-beab3f4f3e8035dcb176330803c0f7bb.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/32 SW Long/WAV/32 SW Rotate Cylinder.wav"
+dest_files=["res://.godot/imported/32 SW Rotate Cylinder.wav-beab3f4f3e8035dcb176330803c0f7bb.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

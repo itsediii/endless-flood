@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c2lut3v80pxdu"
+path="res://.godot/imported/762x54r Spray MP3.mp3-b858a9c976e8cb49a85b6eee8e4dc56e.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Full Sound/7.62x54R/MP3/762x54r Spray MP3.mp3"
+dest_files=["res://.godot/imported/762x54r Spray MP3.mp3-b858a9c976e8cb49a85b6eee8e4dc56e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

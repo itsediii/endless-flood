@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dbmv7uys440fu"
+path="res://.godot/imported/556 Double Tap Isolated WAV.wav-1bc1c11c3086f970f07d37c24d7393ee.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/5.56/WAV/556 Double Tap Isolated WAV.wav"
+dest_files=["res://.godot/imported/556 Double Tap Isolated WAV.wav-1bc1c11c3086f970f07d37c24d7393ee.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://c0gpk3wotqdov"]
+
+[ext_resource type="Script" uid="uid://b5newben3kapp" path="res://scripts/basic_enemy.gd" id="1_3i4hm"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_md22f"]
+radius = 94.02127
+
+[node name="BasicEnemy" type="CharacterBody2D" unique_id=1713638340]
+collision_layer = 4
+collision_mask = 11
+script = ExtResource("1_3i4hm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1314990715]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=845525172]
+
+[node name="DetectionArea" type="Area2D" parent="." unique_id=1676504539]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="DetectionArea" unique_id=1247075202]
+shape = SubResource("CircleShape2D_md22f")
+
+[node name="Hitbox" type="Area2D" parent="." unique_id=1189770347]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Hitbox" unique_id=1166286674]
+
+[node name="PatrolTimer" type="Timer" parent="." unique_id=114086113]
+
+[connection signal="body_entered" from="DetectionArea" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="DetectionArea" to="." method="_on_detection_area_body_exited"]

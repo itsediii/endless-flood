@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://1o8gwln4an77"
+path="res://.godot/imported/AK PolyMag Unpack.wav-17ebe0ed7c3ece7cfbbff29e2f7a1b03.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Mag Pack/WAV/AK PolyMag Unpack.wav"
+dest_files=["res://.godot/imported/AK PolyMag Unpack.wav-17ebe0ed7c3ece7cfbbff29e2f7a1b03.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

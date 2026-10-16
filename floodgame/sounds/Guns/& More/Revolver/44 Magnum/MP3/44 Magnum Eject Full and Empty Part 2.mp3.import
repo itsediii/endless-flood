@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dsxstda4jq12e"
+path="res://.godot/imported/44 Magnum Eject Full and Empty Part 2.mp3-e1a667d3f9071ca6faecca7e92e1a4c9.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/44 Magnum/MP3/44 Magnum Eject Full and Empty Part 2.mp3"
+dest_files=["res://.godot/imported/44 Magnum Eject Full and Empty Part 2.mp3-e1a667d3f9071ca6faecca7e92e1a4c9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

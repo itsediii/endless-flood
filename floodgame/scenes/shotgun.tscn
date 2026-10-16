@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://drlc1oowx6ipe"]
+
+[ext_resource type="PackedScene" uid="uid://d0teeq5nxubtm" path="res://scenes/base_weapon.tscn" id="1_gnj2g"]
+[ext_resource type="Texture2D" uid="uid://g6mil8qhi52p" path="res://assets/guns/gun.png" id="2_1ya1i"]
+[ext_resource type="PackedScene" uid="uid://xwfji5u6nmuf" path="res://scenes/large_bullet.tscn" id="2_w47vr"]
+[ext_resource type="AudioStream" uid="uid://uvy3cxd08yk3" path="res://sounds/Guns/Full Sound/20 Gauge/WAV/20 Gauge Single.wav" id="4_w47vr"]
+
+[node name="Shotgun" unique_id=414497415 instance=ExtResource("1_gnj2g")]
+bullet_scene = ExtResource("2_w47vr")
+fire_rate = 1.5
+damage = 8
+bullet_count = 4
+shoot_sound = ExtResource("4_w47vr")
+
+[node name="GunSprite" parent="." index="0" unique_id=1599421861]
+texture = ExtResource("2_1ya1i")
+region_enabled = true
+region_rect = Rect2(64, 85, 32, 11)
+
+[node name="MuzzleFlash" parent="." index="1" unique_id=1745044742]
+position = Vector2(21.999998, -2)
+scale = Vector2(0.14398736, 0.112500004)
+
+[node name="Muzzle" parent="." index="2" unique_id=1035355505]
+position = Vector2(15, -1)

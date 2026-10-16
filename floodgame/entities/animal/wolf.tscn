@@ -1,0 +1,165 @@
+[gd_scene format=3 uid="uid://brvjgsnyvdj23"]
+
+[ext_resource type="PackedScene" uid="uid://iec5g8knqbcb" path="res://scenes/animal.tscn" id="1_mvi88"]
+[ext_resource type="Texture2D" uid="uid://btk66vaj3ou2" path="res://assets/animals/MiniWolf.png" id="2_djfqe"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_s40oe"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(0, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3e6ip"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(32, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_at5mm"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(64, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vi256"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(96, 224, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hnl7m"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_11vt0"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ge2hb"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dfbfp"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dpm04"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(0, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_evao1"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(32, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_80fdp"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(64, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1qs8"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(96, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7ecsb"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(128, 32, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xscf2"]
+atlas = ExtResource("2_djfqe")
+region = Rect2(160, 32, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_087md"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_s40oe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3e6ip")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_at5mm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vi256")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hnl7m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_11vt0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ge2hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dfbfp")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dpm04")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_evao1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_80fdp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1qs8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7ecsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xscf2")
+}],
+"loop": true,
+"name": &"run",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_djfqe"]
+radius = 7.0
+height = 18.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_djfqe"]
+radius = 25.019993
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_s40oe"]
+radius = 46.0
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3e6ip"]
+radius = 8.0
+height = 22.0
+
+[node name="Wolf" unique_id=163013722 instance=ExtResource("1_mvi88")]
+animal_type = "wolf"
+personality = 2
+speed = 120.0
+max_health = 6
+attack_damage = 2.0
+
+[node name="AnimatedSprite2D" parent="." index="0" unique_id=1226370022]
+sprite_frames = SubResource("SpriteFrames_087md")
+animation = &"idle"
+
+[node name="CollisionShape2D" parent="." index="1" unique_id=1261809350]
+position = Vector2(0, 9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_djfqe")
+
+[node name="CollisionShape2D" parent="InteractionArea" parent_id_path=PackedInt32Array(1862299275) index="0" unique_id=1672776066]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_djfqe")
+
+[node name="CollisionShape2D" parent="DetectionArea" parent_id_path=PackedInt32Array(1714717354) index="0" unique_id=693497370]
+position = Vector2(0, 10)
+shape = SubResource("CircleShape2D_s40oe")
+debug_color = Color(0.6666667, 0.37254903, 0.8901961, 0.08627451)
+
+[node name="CollisionShape2D" parent="Hitbox" parent_id_path=PackedInt32Array(879317011) index="0" unique_id=1774872531]
+position = Vector2(0, 9)
+rotation = 1.5707964
+shape = SubResource("CapsuleShape2D_3e6ip")
+debug_color = Color(0.8834243, 0.32252178, 0.24322942, 0.41960785)

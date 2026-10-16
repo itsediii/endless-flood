@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://dt1v0gvwvj3mt"
+path="res://.godot/imported/32 SW Open Cylinder Part 2.wav-fbf96ac116c7c1d0de5068d1f05c7046.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/32 SW Long/WAV/32 SW Open Cylinder Part 2.wav"
+dest_files=["res://.godot/imported/32 SW Open Cylinder Part 2.wav-fbf96ac116c7c1d0de5068d1f05c7046.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

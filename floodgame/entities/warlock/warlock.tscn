@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://bfevxxa6reonm"]
+
+[ext_resource type="Texture2D" uid="uid://q2gaif4rl8fe" path="res://entities/warlock/warlock_.png" id="1_xiu48"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yuvs4"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(0, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_kstqt"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(24, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ydeih"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(48, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4yibi"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(72, 96, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_jtwpk"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(0, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y7rxk"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(24, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1p018"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(48, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lrsxn"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(72, 0, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_amats"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(0, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e4qw7"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(24, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_54dv6"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(48, 24, 24, 24)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_bsi8w"]
+atlas = ExtResource("1_xiu48")
+region = Rect2(72, 24, 24, 24)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_hrq3d"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yuvs4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kstqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ydeih")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4yibi")
+}],
+"loop": false,
+"name": &"death",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_jtwpk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_y7rxk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1p018")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lrsxn")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_amats")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e4qw7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_54dv6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_bsi8w")
+}],
+"loop": true,
+"name": &"walk",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_lqaot"]
+size = Vector2(14, 18.5)
+
+[node name="warlock" type="CharacterBody2D" unique_id=1125722412]
+collision_mask = 0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1329699466]
+sprite_frames = SubResource("SpriteFrames_hrq3d")
+animation = &"death"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1258112352]
+position = Vector2(0, 3)
+shape = SubResource("RectangleShape2D_lqaot")

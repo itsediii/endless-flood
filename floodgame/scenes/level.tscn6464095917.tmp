@@ -1,0 +1,278 @@
+[gd_scene format=3 uid="uid://bgjm0rlrqf814"]
+
+[ext_resource type="Script" uid="uid://b8rttcsjkjtrp" path="res://level.gd" id="1_klq6b"]
+[ext_resource type="PackedScene" uid="uid://b71be12644ag8" path="res://scenes/island.tscn" id="2_b121j"]
+[ext_resource type="PackedScene" uid="uid://bcy31drk1u3d2" path="res://entities/player/player.tscn" id="3_8c41q"]
+[ext_resource type="Script" uid="uid://bplhuuq5b3st0" path="res://scripts/gun_label.gd" id="8_b121j"]
+[ext_resource type="AudioStream" uid="uid://bpcy80tx0qfx5" path="res://sounds/Nature_Essentials_NOX_SOUND/Ambiance_Rain_Calm_Loop_Stereo.wav" id="9_8c41q"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_b121j"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_8c41q"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.020270273, 0.026966304), 0.0, 1.5520597, 0, 0, Vector2(0.5, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.8846447, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wu84c"]
+curve = SubResource("Curve_8c41q")
+
+[sub_resource type="Gradient" id="Gradient_olg7q"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rtw2f"]
+gradient = SubResource("Gradient_olg7q")
+
+[sub_resource type="Curve" id="Curve_t1rx8"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_8iemx"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.505619), 0.0, 60.838593, 0, 0, Vector2(0.30405408, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_64w2a"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_5dd4i"]
+curve_x = SubResource("Curve_t1rx8")
+curve_y = SubResource("Curve_8iemx")
+curve_z = SubResource("Curve_64w2a")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_fpun6"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(562, 1, 1)
+gravity = Vector3(0, 1000, 0)
+scale_min = 0.19999999
+scale_over_velocity_curve = SubResource("CurveXYZTexture_5dd4i")
+color_initial_ramp = SubResource("GradientTexture1D_rtw2f")
+alpha_curve = SubResource("CurveTexture_wu84c")
+
+[node name="Level" type="Node2D" unique_id=730646566]
+script = ExtResource("1_klq6b")
+
+[node name="Island" parent="." unique_id=956691283 instance=ExtResource("2_b121j")]
+
+[node name="Entities" type="Node" parent="." unique_id=458605066]
+
+[node name="player" parent="Entities" unique_id=2119995513 instance=ExtResource("3_8c41q")]
+z_index = 1
+collision_layer = 2
+
+[node name="Rain" type="GPUParticles2D" parent="Entities/player" unique_id=606548517]
+material = SubResource("CanvasItemMaterial_b121j")
+position = Vector2(0, 80)
+amount = 1000
+preprocess = 0.5
+visibility_rect = Rect2(-562.27966, -201.99364, 1124.6794, 54.506393)
+process_material = SubResource("ParticleProcessMaterial_fpun6")
+
+[node name="Enemies" type="Node2D" parent="Entities" unique_id=645909583]
+
+[node name="Animals" type="Node2D" parent="Entities" unique_id=1591477286]
+
+[node name="Chests" type="Node2D" parent="Entities" unique_id=819920361]
+
+[node name="LevelTimer" type="Timer" parent="." unique_id=97721738]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="." unique_id=538293422]
+
+[node name="GameplayUI" type="Control" parent="CanvasLayer" unique_id=963397830]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="HealthLabel" type="Label" parent="CanvasLayer/GameplayUI" unique_id=1174774702]
+layout_mode = 1
+offset_left = 2.0
+offset_right = 42.0
+offset_bottom = 32.0
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+
+[node name="GunLabel" type="Label" parent="CanvasLayer/GameplayUI" unique_id=1725424752 node_paths=PackedStringArray("player")]
+layout_mode = 1
+offset_left = 4.0
+offset_top = 30.0
+offset_right = 44.0
+offset_bottom = 54.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+script = ExtResource("8_b121j")
+player = NodePath("../../../Entities/player")
+
+[node name="CountdownLabel" type="Label" parent="CanvasLayer/GameplayUI" unique_id=144890842]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 535.0
+offset_top = 1.0
+offset_right = 575.0
+offset_bottom = 33.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 32
+
+[node name="ScoreLabel" type="Label" parent="CanvasLayer/GameplayUI" unique_id=624398233]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 537.0
+offset_top = 26.0
+offset_right = 577.0
+offset_bottom = 50.0
+grow_horizontal = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+
+[node name="QuotaLabel" type="RichTextLabel" parent="CanvasLayer/GameplayUI" unique_id=915374456]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 945.0
+offset_right = 1112.0
+offset_bottom = 171.0
+grow_horizontal = 0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/normal_font_size = 28
+bbcode_enabled = true
+
+[node name="GameOver" type="ColorRect" parent="CanvasLayer" unique_id=493329177]
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35686275, 0.35686275, 0.35686275, 0.3137255)
+
+[node name="YouDiedText" type="Label" parent="CanvasLayer/GameOver" unique_id=482180207]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -74.0
+offset_right = 149.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 140
+text = "YOU DIED"
+
+[node name="GameOverScoreLabel" type="Label" parent="CanvasLayer/GameOver" unique_id=1610873033]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = 49.0
+offset_right = 20.0
+offset_bottom = 65.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 48
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer/GameOver" unique_id=1430662657]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -148.0
+offset_right = 125.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 18
+
+[node name="RetryButton" type="Button" parent="CanvasLayer/GameOver/ButtonContainer" unique_id=1825429017]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Retry"
+
+[node name="MenuButton" type="Button" parent="CanvasLayer/GameOver/ButtonContainer" unique_id=1922239937]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit to Main Menu"
+
+[node name="Pause" type="ColorRect" parent="CanvasLayer" unique_id=892558002]
+process_mode = 3
+visible = false
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.35686275, 0.35686275, 0.35686275, 0.3137255)
+
+[node name="PauseText" type="Label" parent="CanvasLayer/Pause" unique_id=36233667]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -149.0
+offset_top = -74.0
+offset_right = 149.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 140
+text = "PAUSED"
+
+[node name="ButtonContainer" type="VBoxContainer" parent="CanvasLayer/Pause" unique_id=669397282]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -125.0
+offset_top = -148.0
+offset_right = 125.0
+offset_bottom = -96.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 18
+
+[node name="ContinueButton" type="Button" parent="CanvasLayer/Pause/ButtonContainer" unique_id=70789228]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Continue"
+
+[node name="MenuButton2" type="Button" parent="CanvasLayer/Pause/ButtonContainer" unique_id=846322170]
+layout_mode = 2
+theme_override_font_sizes/font_size = 32
+text = "Quit to Main Menu"
+
+[node name="RainSounds" type="AudioStreamPlayer" parent="." unique_id=1697432626]
+stream = ExtResource("9_8c41q")
+volume_db = -10.0
+autoplay = true

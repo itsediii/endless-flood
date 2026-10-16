@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://drkeku28kiwqd"
+path="res://.godot/imported/20 Gauge Single Isolated.mp3-9f7416f8e4ba5e1f65929156ee2e9db4.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Isolated/20 Gauge/MP3/20 Gauge Single Isolated.mp3"
+dest_files=["res://.godot/imported/20 Gauge Single Isolated.mp3-9f7416f8e4ba5e1f65929156ee2e9db4.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,24 @@
+[remap]
+
+importer="wav"
+type="AudioStreamWAV"
+uid="uid://clg3gpy8ceoaj"
+path="res://.godot/imported/9mm Pistol Chamber Check Part 2.wav-94df9cb3e014880ec700430f2ac91c82.sample"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Pistol/WAV/9mm Pistol Chamber Check Part 2.wav"
+dest_files=["res://.godot/imported/9mm Pistol Chamber Check Part 2.wav-94df9cb3e014880ec700430f2ac91c82.sample"]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop_mode=0
+edit/loop_begin=0
+edit/loop_end=-1
+compress/mode=2

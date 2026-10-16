@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://nn3ejdt80sry"]
+
+[ext_resource type="PackedScene" uid="uid://d0teeq5nxubtm" path="res://scenes/base_weapon.tscn" id="1_igbvm"]
+[ext_resource type="PackedScene" uid="uid://bufwyxqk3f8qa" path="res://scenes/medium_bullet.tscn" id="2_buff3"]
+[ext_resource type="AudioStream" uid="uid://behiaciht4iij" path="res://sounds/Guns/Full Sound/9mm/WAV/9mm Single.wav" id="3_1e3ry"]
+
+[sub_resource type="CompressedTexture2D" id="CompressedTexture2D_buff3"]
+load_path = "res://.godot/imported/gun.png-be56bff5ba09a0e5ffe71611b2140e54.ctex"
+
+[node name="Pistol" unique_id=414497415 instance=ExtResource("1_igbvm")]
+bullet_scene = ExtResource("2_buff3")
+bullet_speed = 400.0
+bullet_scale = 0.1
+shoot_sound = ExtResource("3_1e3ry")
+
+[node name="GunSprite" parent="." index="0" unique_id=1599421861]
+position = Vector2(-1.1920929e-07, 0)
+scale = Vector2(0.536, 0.368)
+texture = SubResource("CompressedTexture2D_buff3")
+region_enabled = true
+region_rect = Rect2(0, 118, 12, 10)
+
+[node name="MuzzleFlash" parent="." index="1" unique_id=1745044742]
+position = Vector2(5.5, -1)
+scale = Vector2(0.06329113, 0.034374997)
+frame = 0
+frame_progress = 0.0
+
+[node name="Muzzle" parent="." index="2" unique_id=1035355505]
+position = Vector2(3, -1)

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cuwkb01okao0b"
+path="res://.godot/imported/Bolt Mag Unpack.mp3-be0a5ba0251aa614f94fd9f62a6a765f.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Mag Pack/MP3/Bolt Mag Unpack.mp3"
+dest_files=["res://.godot/imported/Bolt Mag Unpack.mp3-be0a5ba0251aa614f94fd9f62a6a765f.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

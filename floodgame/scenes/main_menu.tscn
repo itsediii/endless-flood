@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://bxixi18f4fdfe"]
+
+[ext_resource type="Script" uid="uid://ce7tu2p8ota12" path="res://scripts/cloud_generator.gd" id="1_l6cm7"]
+[ext_resource type="Script" uid="uid://yrs51jwpw5yt" path="res://scripts/main_menu.gd" id="1_wu84c"]
+[ext_resource type="AudioStream" uid="uid://bpcy80tx0qfx5" path="res://sounds/Nature_Essentials_NOX_SOUND/Ambiance_Rain_Calm_Loop_Stereo.wav" id="3_bqqt6"]
+[ext_resource type="Texture2D" uid="uid://cyv1utd7a0dsq" path="res://assets/background/Ocean_6/5.png" id="4_wu84c"]
+[ext_resource type="FontFile" uid="uid://044j4okrlmfj" path="res://assets/DigitalDisco.ttf" id="5_8ln24"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_ekxnf"]
+blend_mode = 1
+
+[sub_resource type="Curve" id="Curve_bqqt6"]
+_limits = [0.0, 0.3, 0.0, 1.0]
+_data = [Vector2(0.020270273, 0.026966304), 0.0, 1.5520597, 0, 0, Vector2(0.5, 0.3), 0.0, 0.0, 0, 0, Vector2(1, 0), -1.8846447, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveTexture" id="CurveTexture_wu84c"]
+curve = SubResource("Curve_bqqt6")
+
+[sub_resource type="Gradient" id="Gradient_8ln24"]
+colors = PackedColorArray(1, 1, 1, 0.078431375, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_rtw2f"]
+gradient = SubResource("Gradient_8ln24")
+
+[sub_resource type="Curve" id="Curve_oa1go"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="Curve" id="Curve_tbmy8"]
+_limits = [0.0, 30.0, 0.0, 1.0]
+_data = [Vector2(0, 15.505619), 0.0, 60.838593, 0, 0, Vector2(0.30405408, 30), 0.0, 0.0, 0, 0, Vector2(1, 30), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Curve" id="Curve_jk1qb"]
+_limits = [0.0, 3.0, 0.0, 1.0]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_5dd4i"]
+curve_x = SubResource("Curve_oa1go")
+curve_y = SubResource("Curve_tbmy8")
+curve_z = SubResource("Curve_jk1qb")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_lgwnu"]
+particle_flag_disable_z = true
+emission_shape_offset = Vector3(0, -200, 0)
+emission_shape = 3
+emission_box_extents = Vector3(562, 1, 1)
+gravity = Vector3(0, 1000, 0)
+scale_min = 0.19999999
+scale_over_velocity_curve = SubResource("CurveXYZTexture_5dd4i")
+color_initial_ramp = SubResource("GradientTexture1D_rtw2f")
+alpha_curve = SubResource("CurveTexture_wu84c")
+
+[node name="MainMenu" type="Control" unique_id=1721980751]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_wu84c")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=453488418]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.5
+anchor_top = -0.5
+anchor_right = 1.5
+anchor_bottom = 1.5
+offset_left = 576.0
+offset_top = 324.0
+offset_right = -576.0
+offset_bottom = -324.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_wu84c")
+expand_mode = 3
+metadata/_edit_use_anchors_ = true
+
+[node name="Rain" type="GPUParticles2D" parent="." unique_id=763968471]
+material = SubResource("CanvasItemMaterial_ekxnf")
+position = Vector2(574, 203)
+amount = 1000
+preprocess = 0.5
+visibility_rect = Rect2(-562.27966, -201.99364, 1124.6794, 54.506393)
+process_material = SubResource("ParticleProcessMaterial_lgwnu")
+
+[node name="CloudsParallax" type="Parallax2D" parent="." unique_id=61765140]
+scroll_scale = Vector2(0, 0)
+scroll_offset = Vector2(0, 70)
+repeat_size = Vector2(1152, 0)
+autoscroll = Vector2(20, 0)
+
+[node name="CloudGenerator" type="Node2D" parent="CloudsParallax" unique_id=1490787813]
+script = ExtResource("1_l6cm7")
+cloud_count = 6
+min_distance = 220.0
+
+[node name="RainSounds" type="AudioStreamPlayer" parent="." unique_id=220862399]
+stream = ExtResource("3_bqqt6")
+volume_db = -10.0
+autoplay = true
+
+[node name="MainMenuUI" type="CanvasLayer" parent="." unique_id=2061145423]
+
+[node name="Title" type="Label" parent="MainMenuUI" unique_id=654387057]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -112.0
+offset_top = -144.0
+offset_right = 112.0
+offset_bottom = -13.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 64
+text = "ENDLESS
+FLOOD"
+horizontal_alignment = 1
+
+[node name="MenuPositioner" type="MarginContainer" parent="MainMenuUI" unique_id=2082582699]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -48.5
+offset_top = -77.0
+offset_right = 48.5
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 8
+theme_override_constants/margin_bottom = 120
+
+[node name="Buttons" type="VBoxContainer" parent="MainMenuUI/MenuPositioner" unique_id=1129719332]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="PlayButton" type="Button" parent="MainMenuUI/MenuPositioner/Buttons" unique_id=1815440590]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "START"
+
+[node name="QuitButton" type="Button" parent="MainMenuUI/MenuPositioner/Buttons" unique_id=569583174]
+custom_minimum_size = Vector2(200, 60)
+layout_mode = 2
+theme_override_fonts/font = ExtResource("5_8ln24")
+theme_override_font_sizes/font_size = 32
+text = "QUIT"

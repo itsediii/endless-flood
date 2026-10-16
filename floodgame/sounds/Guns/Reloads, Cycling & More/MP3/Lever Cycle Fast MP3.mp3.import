@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bcdjgnru014kv"
+path="res://.godot/imported/Lever Cycle Fast MP3.mp3-42793994e99d45043c52cdbb0c27d9d1.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Reloads, Cycling & More/MP3/Lever Cycle Fast MP3.mp3"
+dest_files=["res://.godot/imported/Lever Cycle Fast MP3.mp3-42793994e99d45043c52cdbb0c27d9d1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

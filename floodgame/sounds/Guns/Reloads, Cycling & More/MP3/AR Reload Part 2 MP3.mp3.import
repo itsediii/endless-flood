@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cykaf4exvdpv7"
+path="res://.godot/imported/AR Reload Part 2 MP3.mp3-da77fb568fd7953b20d27b28634a6d2b.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/Reloads, Cycling & More/MP3/AR Reload Part 2 MP3.mp3"
+dest_files=["res://.godot/imported/AR Reload Part 2 MP3.mp3-da77fb568fd7953b20d27b28634a6d2b.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

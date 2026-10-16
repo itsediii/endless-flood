@@ -1,0 +1,28 @@
+[gd_scene format=3 uid="uid://dmedssctkw6fn"]
+
+[ext_resource type="Script" uid="uid://boltgr7dpeun1" path="res://scenes/taiga_tree.gd" id="1_fc757"]
+[ext_resource type="Texture2D" uid="uid://b2cki0qld88t" path="res://assets/map/taiga_ [version 1.0]/taiga_ [resources].png" id="2_80iau"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_fc757"]
+size = Vector2(12, 24)
+
+[node name="taiga_tree" type="StaticBody2D" unique_id=466393740]
+collision_mask = 8
+script = ExtResource("1_fc757")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=409405669]
+position = Vector2(84, -8)
+texture = ExtResource("2_80iau")
+offset = Vector2(-85, 9)
+region_enabled = true
+region_rect = Rect2(18, 23, 12, 23)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2127754828]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_fc757")
+
+[node name="Area2D" type="Area2D" parent="." unique_id=617928294]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D" unique_id=17898771]
+position = Vector2(-1, 0)
+shape = SubResource("RectangleShape2D_fc757")

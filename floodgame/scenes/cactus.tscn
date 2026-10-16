@@ -1,0 +1,19 @@
+[gd_scene format=3 uid="uid://c80pcjhjh2n6y"]
+
+[ext_resource type="Script" uid="uid://cso8soxt7iu74" path="res://scripts/cactus.gd" id="1_3uwn4"]
+[ext_resource type="Texture2D" uid="uid://8u3nn6nwwlqm" path="res://assets/map/desert_ [version 1.0]/desert_ [resources].png" id="2_iiia4"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_f17ax"]
+size = Vector2(10, 17)
+
+[node name="cactus" type="StaticBody2D" unique_id=1011998173]
+script = ExtResource("1_3uwn4")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=23618843]
+texture = ExtResource("2_iiia4")
+region_enabled = true
+region_rect = Rect2(19, 19, 10, 25)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1195539797]
+position = Vector2(0, 0.5)
+shape = SubResource("RectangleShape2D_f17ax")

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://ckxg8oglbgcp6"
+path="res://.godot/imported/32 SW Hammer Decock.mp3-9904d8f4c80e9173cbe32dca223c9c97.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/32 SW Long/MP3/32 SW Hammer Decock.mp3"
+dest_files=["res://.godot/imported/32 SW Hammer Decock.mp3-9904d8f4c80e9173cbe32dca223c9c97.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

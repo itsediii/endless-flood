@@ -1,0 +1,16 @@
+[gd_scene format=3 uid="uid://ckupdms3h0r7y"]
+
+[ext_resource type="Script" uid="uid://by7bjena7b8kh" path="res://scenes/animal_pickup.gd" id="1_jkgd6"]
+[ext_resource type="Script" uid="uid://y1vkiyc1yhlo" path="res://scripts/interaction_area.gd" id="1_p78we"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_jkgd6"]
+
+[node name="AnimalPickup" type="Node2D" unique_id=966762858]
+script = ExtResource("1_jkgd6")
+
+[node name="InteractionArea" type="Area2D" parent="." unique_id=1938507570]
+script = ExtResource("1_p78we")
+metadata/_custom_type_script = "uid://bvgnj7o76pg7p"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="InteractionArea" unique_id=695488701]
+shape = SubResource("CircleShape2D_jkgd6")

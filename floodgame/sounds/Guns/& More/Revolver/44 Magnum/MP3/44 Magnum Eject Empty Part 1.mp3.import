@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dydh23ry4u2fc"
+path="res://.godot/imported/44 Magnum Eject Empty Part 1.mp3-42abaa43082e577321e581d1f4b2a1a1.mp3str"
+
+[deps]
+
+source_file="res://sounds/Guns/& More/Revolver/44 Magnum/MP3/44 Magnum Eject Empty Part 1.mp3"
+dest_files=["res://.godot/imported/44 Magnum Eject Empty Part 1.mp3-42abaa43082e577321e581d1f4b2a1a1.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
